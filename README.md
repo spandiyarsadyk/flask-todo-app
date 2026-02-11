@@ -1,45 +1,43 @@
-Simple Flask Todo App using SQLAlchemy and SQLite database.
+# Flask ToDo App
 
-For styling [semantic-ui](https://semantic-ui.com/) is used.
+Pet project for practicing backend and DevOps skills.
 
-### Setup
-Create project with virtual environment
+## Tech stack
+- Python 3
+- Flask
+- PostgreSQL
+- SQLAlchemy
+- Gunicorn
+- Nginx
+- systemd
+- Linux (Ubuntu)
 
-```console
-$ mkdir myproject
-$ cd myproject
-$ python3 -m venv venv
-```
+## Features
+- Create, update and delete tasks
+- Data stored in PostgreSQL
+- Environment variables via .env
+- Production-ready setup with Gunicorn and Nginx
 
-Activate it
-```console
-$ . venv/bin/activate
-```
+## Architecture
+Client → Nginx → Gunicorn → Flask → PostgreSQL
 
-or on Windows
-```console
-venv\Scripts\activate
-```
+## Deployment
+- Application runs as systemd service
+- Reverse proxy via Nginx
+- Database: PostgreSQL
 
-Install Flask
-```console
-$ pip install Flask
-$ pip install Flask-SQLAlchemy
-```
+## What I practiced
+- Python virtual environments (venv)
+- Flask application structure
+- PostgreSQL integration
+- systemd services
+- Nginx reverse proxy
+- Git and GitHub workflow
 
-Set environment variables in terminal
-```console
-$ export FLASK_APP=app.py
-$ export FLASK_ENV=development
-```
-
-or on Windows
-```console
-$ set FLASK_APP=app.py
-$ set FLASK_ENV=development
-```
-
-Run the app
-```console
-$ flask run
+## How to run locally
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python app.py
 ```
